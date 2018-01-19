@@ -1,0 +1,317 @@
+<html>
+<head>
+<title>Form</title>
+<style>
+* {
+    box-sizing: border-box;
+} 
+
+body{
+    max-width: 50%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin: auto;
+    background: url("/TB/img/Form.jpg");
+    background-size: 50%;
+}
+
+.header{
+    border-radius: 0px;
+    background-color: #0a0a0a;
+    padding: 20px;
+}
+
+.contain {
+    display: block;
+    position: relative;
+    padding-top: 5;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contain input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.contain:hover input ~ .checkmark {
+    background-color: rgb(255, 255, 255);
+}
+
+.contain input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.contain input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.contain .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+    background: white;
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1 px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 12px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #26cc3c;
+}
+
+.background {
+    border-radius: 0px;
+    background-color: #dee0df;
+    padding: 20px;
+}
+
+.footer{
+    border-radius: 0px;
+    background-color: #0a0a0a;
+    padding: 10px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100px;
+        margin-top: 0;
+    }
+}
+
+.container {
+    display: block ; 
+    position: relative;
+    padding-top: 5px;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checklist {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eeeeee;
+}
+
+.container:hover input ~ .checklist{
+    background-color: #ccc;
+}
+
+.container input:checked ~ .checklist {
+    background-color: #2196f3;
+}
+
+.checklist:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checklist:after{
+    display: block;
+}
+
+.container .checklist:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0  3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+</style>
+</head>
+<body>
+<div class="header"> 
+    <h1 align="center"><font color="white">Konsultasi Penyakit</font></h1>
+</div>    
+<div class="background">
+  <div class="row">
+      <div class="col-25">
+        <label for="fname">Nama Lengkap </label>
+    </div>
+    <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Masukan Nama Lengkap Anda...">
+    </div>
+</div>
+<div class="row">
+        <div class="col-25">
+        <label for="TTL">Tempat & Tanggal Lahir</label>
+      </div>
+      <div class="col-75">
+          <input type="text" id="fname" name="firstname" placeholder="Masukkan Tempat dan Tanggal Lahir Anda...">
+      </div>
+  </div>
+<div class="row">
+    <div class="col-25">
+         <label for="TTL">Jenis Kelamin</label>
+    </div>
+    <br>
+<div class="col-75">
+    <label class="contain">Laki-Laki
+        <input type="radio" name="Kelamin" value="Laki-Laki">
+        <span class="checkmark"></span>
+    </label>
+    <label class="contain">Perempuan
+            <input type="radio" name="Kelamin" value="Laki-Laki">
+            <span class="checkmark"></span>
+    </label>
+</div>
+</div>
+<div class="row">
+        <div class="col-25">
+        <label for="Golongan Darah">Golongan Darah</label>
+      </div>
+      <div class="col-25">
+        <select name="Golongan Darah">
+            <option value="Golongan Darah"><b>Pilih</b></option>
+            <option value="A"><b>A</b></option>
+            <option value="B"><b>B</b></option>
+            <option value="AB"><b>AB</b></option>
+            <option value="O"><b>O</b></option>
+        </select>
+       </div>
+    </div>
+<div class="row">
+    <div class="col-25">
+        <label for="Agama">Agama</label>
+    </div>
+      <div class="col-25">
+            <select name="Golongan Darah">
+                <option value="Agama"><b>Pilih</b></option>
+                <option value="Islam"><b>Islam</b></option>
+                <option value="Budha"><b>Budha</b></option>
+                <option value="Hindu"><b>Hindu</b></option>
+                <option value="Kristen"><b>Kristen</b></option>
+                <option value="Katolik"><b>Katolik</b></option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-25">
+            <label for="Alamat">Alamat</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="Alamat" name="Alamat" placeholder="Masukkan Alamat Tinggal Anda...">
+          </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="penyakit">Penyakit</label>
+        </div>
+        <div class="col-75">
+            <br>
+            <tabel>
+            <label class="container">Jantung Koroner
+                <input type="checkbox">
+                <span class="checklist"></span>
+            </label>
+            <label class="container">Stroke
+                    <input type="checkbox">
+                    <span class="checklist"></span>
+            </label>
+            <label class="container">Kanker
+                    <input type="checkbox">
+                    <span class="checklist"></span>
+            </label>
+            <label class="container">HIV/AIDS
+                    <input type="checkbox">
+                    <span class="checklist"></span>
+            </label>
+            </tabel>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="Keterangan">Riwayat Penyakit</label>
+        </div>
+        <div class="col-75">
+            <textarea id="keterangan" name="Keterangan" placeholder="Masukkan Riwayat Penyakit.." style="height:200px"></textarea>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <input type="submit" value="Submit">
+    </div>
+</div>
+<div class="footer"> 
+<h4 align="center"><font color="white">@ 2018, Created by Fathurrohman</font></h4>
+</div>  
+</body>
+</html>
