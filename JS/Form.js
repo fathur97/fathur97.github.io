@@ -1,26 +1,23 @@
-	function Kesehatan(){
-		var Namastr   = (document.fForm.Nama.value);
-		var TTLstr      = (document.fForm.TTL.value);
-		var Goldarstr   = (document.fForm.Goldar.value);
-		var Agamastr    = (document.fForm.Agama.value);
-		var Komentarstr = (document.fForm.Komentar); 
-		var Status1str  = " ";
-		var Status2str  = " ";
-		var Ket1 ;
-		var Ket2 ;
-		var Ket3 ;
-		var Ket4 ;
-
-			//M
-			if(fForm.Kelamin.checked == true){
-				Status1 = "Laki-Laki";
-			}
-			else{
-				Status1 = "Perempuan";
-			}
-				Tampil1 = Status;
-			
-			//Memilih Jenis Penyakit
+function displayalert(form){ 
+			var Namastr     = (document.fForm.Nama.value);
+			var TTLstr      = (document.fForm.TTL.value);
+			var Goldarstr   = (document.fForm.Goldar.value);
+			var Alamatstr   = (document.fForm.Alamat.value);
+			var Agamastr    = (document.fForm.Agama.value);
+			var Komentarstr = (document.fForm.Komentar.value);
+			var Status = ""; 
+			var Namastr = "";
+			var TTLstr = "";
+			var Tampil1 = "";
+			var Goldarstr = "";
+			var Agamastr = "";
+			var Komentarstr = "";
+			var Ket1 = "";
+			var Ket2 = "";
+			var Ket3 = "";
+			var Ket4 = "";
+				 
+		//Memilih Jenis Penyakit
 			if(fForm.Jantung.checked == true){
 				Ket1 = "Jantung Koroner";
 			}			
@@ -33,10 +30,18 @@
 			if(fForm.HIV.checked == true){
 				Ket4 = "HIV";
 			}
-				Tampil2 = Ket1 + " , "+ ket2 + " , " + Ket3 + " , " + Ket4;
-		
-		    //Menampilkan Isi Form
-		alert("Nama Anda  : " + Namastr + "\nTempat dan Tanggal Lahir : " + TTLstr + "\nJenis Kelamin : " + Tampil1 +
-			 "\nGolongan Darah : " + Goldarstr +"\nAgama : "+ Agamastr + "\nAlamat : " + "\nKonsultasi Penyakit" + Tampil2 +
-			 "\nRiwayat Penyakit : " + Komentarstr);
+
+		//Memilih Jenis Kelamin
+			if(fForm.Kelamin.checked == true){
+				Status = "Laki-Laki";
+			}
+			else if(fForm.Kelamin.checked == true){
+				Status = "Perempuan";
+			}
+				Tampil = Status;
+				
+		//Menampilkan Isi Form
+		alert("Nama Anda  : " + Namastr + "\nTempat dan Tanggal Lahir : " + TTLstr + "\nJenis Kelamin : " + Tampil +
+			 "\nGolongan Darah : " + Goldarstr +"\nAgama : "+ Agamastr + "\nAlamat : " + Alamatstr + "\nKonsultasi Penyakit : " + Ket1 + " " + Ket2 + " " + Ket3 + " "+ Ket4 +
+			 "\nRiwayat Penyakit : " + "\n" + Komentarstr);
 	}
