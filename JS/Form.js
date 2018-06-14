@@ -1,4 +1,4 @@
-function displayalert(form){ 
+function Kesehatan(form){ 
 			var Namastr     = (document.fForm.Nama.value);
 			var TTLstr      = (document.fForm.TTL.value);
 			var Goldarstr   = (document.fForm.Goldar.value);
