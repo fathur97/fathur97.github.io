@@ -198,6 +198,8 @@ input[type=submit]:hover {
 </style>
 </head>
 <body>
+	<script scr=""></script>
+    <form name="fForm">	
 <div class="header"> 
     <h1 align="center"><font color="white">Konsultasi Penyakit</font></h1>
 </div>    
@@ -207,7 +209,7 @@ input[type=submit]:hover {
         <label for="fname">Nama Lengkap </label>
     </div>
     <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Masukan Nama Lengkap Anda...">
+        <input type="text" id="fname" name="Nama" placeholder="Masukan Nama Lengkap Anda...">
     </div>
 </div>
 <div class="row">
@@ -215,7 +217,7 @@ input[type=submit]:hover {
         <label for="TTL">Tempat & Tanggal Lahir</label>
       </div>
       <div class="col-75">
-          <input type="text" id="fname" name="firstname" placeholder="Masukkan Tempat dan Tanggal Lahir Anda...">
+          <input type="text" id="fname" name="TTL" placeholder="Masukkan Tempat dan Tanggal Lahir Anda...">
       </div>
   </div>
 <div class="row">
@@ -239,7 +241,7 @@ input[type=submit]:hover {
         <label for="Golongan Darah">Golongan Darah</label>
       </div>
       <div class="col-25">
-        <select name="Golongan Darah">
+        <select name="Goldar">
             <option value="Golongan Darah"><b>Pilih</b></option>
             <option value="A"><b>A</b></option>
             <option value="B"><b>B</b></option>
@@ -253,7 +255,7 @@ input[type=submit]:hover {
         <label for="Agama">Agama</label>
     </div>
       <div class="col-25">
-            <select name="Golongan Darah">
+            <select name="Agama">
                 <option value="Agama"><b>Pilih</b></option>
                 <option value="Islam"><b>Islam</b></option>
                 <option value="Budha"><b>Budha</b></option>
@@ -279,19 +281,19 @@ input[type=submit]:hover {
             <br>
             <tabel>
             <label class="container">Jantung Koroner
-                <input type="checkbox">
+                <input type="checkbox" value="ON" name="Jantung">
                 <span class="checklist"></span>
             </label>
             <label class="container">Stroke
-                    <input type="checkbox">
+                    <input type="checkbox" value="ON" name="Stroke">
                     <span class="checklist"></span>
             </label>
             <label class="container">Kanker
-                    <input type="checkbox">
+                    <input type="checkbox" value="ON" name="Kanker">
                     <span class="checklist"></span>
             </label>
             <label class="container">HIV/AIDS
-                    <input type="checkbox">
+                    <input type="checkbox" value="ON" name="HIV">
                     <span class="checklist"></span>
             </label>
             </tabel>
@@ -302,7 +304,7 @@ input[type=submit]:hover {
             <label for="Keterangan">Riwayat Penyakit</label>
         </div>
         <div class="col-75">
-            <textarea id="keterangan" name="Keterangan" placeholder="Masukkan Riwayat Penyakit.." style="height:200px"></textarea>
+            <textarea id="keterangan" name="Komentar" placeholder="Masukkan Riwayat Penyakit.." style="height:200px"></textarea>
         </div>
     </div>
     <br>
@@ -312,6 +314,7 @@ input[type=submit]:hover {
 </div>
 <div class="footer"> 
 <h4 align="center"><font color="white">@ 2018, Created by Fathurrohman</font></h4>
-</div>  
+</div> 
+     </form>
 </body>
 </html>
